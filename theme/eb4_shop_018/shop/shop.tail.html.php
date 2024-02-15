@@ -21,11 +21,11 @@ if (!defined('_EYOOM_')) exit;
 				<div class="footer-top">
 					<div class="container">
 						<div class="row g-lg-5">
-							<div class="col-lg-4 col-xl-3">
-								<?php /* EB슬라이더 - shop018 footer slider */ ?>
-								<?php echo eb_slider('1651650109'); ?>
-							</div>
-							<div class="col-lg-8 col-xl-9">
+<!--							<div class="col-lg-4 col-xl-3">-->
+<!--								--><?php ///* EB슬라이더 - shop018 footer slider */ ?>
+<!--								--><?php //echo eb_slider('1651650109'); ?>
+<!--							</div>-->
+							<div class="col-lg-12 col-xl-12">
 								<?php /* EB최신글 - shop018 rolling */ ?>
 								<?php echo eb_latest('1634883005'); ?>
 								<div class="row g-0">
@@ -33,18 +33,18 @@ if (!defined('_EYOOM_')) exit;
 										<div class="footer-top-box footer-top-customer">
 											<h4>고객센터</h4>
 											<div class="phone-num">
-												<strong class="en-font"><?php echo $bizinfo['bi_cs_tel1']; ?></strong>
-												<small><?php echo $bizinfo['bi_cs_time']; ?></small>
+												<strong class="en-font" style="font-family: Pretendard-Bold,serif"><?php echo $bizinfo['bi_cs_tel1']; ?></strong>
+												<small style="font-family: Pretendard-Bold,serif"><?php echo $bizinfo['bi_cs_time']; ?></small>
 											</div>
-											<div class="footer-btn"><a href="mailto:<?php echo $bizinfo['bi_company_infomail']; ?>"><i class="far fa-envelope"></i> &nbsp; <?php echo $bizinfo['bi_company_infomail']; ?></a></div>
+											<div class="footer-btn" style="font-family: Pretendard-Bold,serif"><a href="mailto:<?php echo $bizinfo['bi_company_infomail']; ?>"><i class="far fa-envelope"></i> &nbsp; <?php echo $bizinfo['bi_company_infomail']; ?></a></div>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="footer-top-box footer-top-bank">
 											<h4>계좌안내</h4>
 											<div class="bank-num">
-												<strong>국제은행 <span class="en-font">111-22-333333</span></strong>
-												<small>예금주 : 홍길동</small>
+												<strong>하나은행 <span class="en-font">123-45-67890</span></strong>
+												<h4>예금주 : 디제이허브(주)</h4>
 											</div>
 											<div class="footer-btn">
 												<a href="<?php echo G5_BBS_URL; ?>/faq.php" class="btn-1">FAQ <i class="fas fa-chevron-right"></i></a>
