@@ -160,7 +160,7 @@ strong {font-weight: 700;}
 	.gnb-wrap .mobile-box {display: none;}
 	.gnb-wrap .gnb .gnb-nav {display: flex;flex-wrap: wrap;}
 	.gnb-wrap .gnb .gnb-nav > li {padding: 0 20px 0 0;}
-	.gnb-wrap .gnb .gnb-nav > li > a {display: block;padding:0;line-height: 70px;font-size: var(--small-font-size);font-weight: 700;color: var(--text-color);}
+	.gnb-wrap .gnb .gnb-nav > li > a {display: block;padding:0;line-height: 70px;font-size: 20px;font-weight: 700;color: var(--text-color);}
 	.gnb-wrap .gnb .gnb-nav > li > a.cate-dropdown-open {display: none;}
 	.gnb-wrap .gnb .gnb-nav > li > a:hover, .gnb-wrap .gnb .gnb-nav > li.active > a {color:var(--primary-color)}
 	.gnb-wrap .gnb .gnb-nav > li > a::after {display: none;}

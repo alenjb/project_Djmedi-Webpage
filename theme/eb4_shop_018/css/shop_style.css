@@ -160,14 +160,16 @@ strong {font-weight: 700;}
 	.gnb-wrap .mobile-box {display: none;}
 	.gnb-wrap .gnb .gnb-nav {display: flex;flex-wrap: wrap;}
 	.gnb-wrap .gnb .gnb-nav > li {padding: 0 20px 0 0;}
-	.gnb-wrap .gnb .gnb-nav > li > a {display: block;padding:0;line-height: 70px;font-size: var(--small-font-size);font-weight: 700;color: var(--text-color);}
+	.gnb-wrap .gnb .gnb-nav > li > a {display: block;padding:0;line-height: 70px;font-size: var(--h3-font-size);font-weight: 700;color: var(--text-color);}
 	.gnb-wrap .gnb .gnb-nav > li > a.cate-dropdown-open {display: none;}
 	.gnb-wrap .gnb .gnb-nav > li > a:hover, .gnb-wrap .gnb .gnb-nav > li.active > a {color:var(--primary-color)}
 	.gnb-wrap .gnb .gnb-nav > li > a::after {display: none;}
 	.gnb-wrap .gnb .gnb-nav > li > ul {display: block;left: -5%;opacity: 0;visibility: hidden;min-width: 150px;padding: 5px 30px;background-color: var(--body-color);border: 0 none;-webkit-box-shadow: -1px 2px 19px 3px rgb(14 0 40 /6%);box-shadow: -1px 2px 19px 3px rgb(14 0 40 /6%);-webkit-transform: translateY(20px);-moz-transform: translateY(20px);-o-transform: translateY(20px);-ms-transform: translateY(20px);transform: translateY(20px);-webkit-transition: all 0.25s ease;-moz-transition: all 0.25s ease;-o-transition: all 0.25s ease;-ms-transition: all 0.25s ease;transition: all 0.25s ease}
 	.gnb-wrap .gnb .gnb-nav > li:hover > ul {opacity: 1;visibility: visible;-webkit-transform: translateY(0);-moz-transform: translateY(0);-o-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);}
 	.gnb-wrap .gnb .gnb-nav > li > ul > li {position: relative}
-	.gnb-wrap .gnb .gnb-nav > li > ul > li > a {padding: 10px 0;font-size: var(--small-font-size);color: var(--text-color);background: none;}
+	/* pc에서 상단바 메뉴 안의 리스트들 글씨크기 조정 */
+	.gnb-wrap .gnb .gnb-nav > li > ul > li > a {padding: 10px 0;font-size: var(--normal-font-size);color: var(--text-color);background: none;}
+
 	.gnb-wrap .gnb .gnb-nav > li > ul > li:last-child > a {border: 0 none}
 	.gnb-wrap .gnb .gnb-nav > li > ul > li > a:hover, .gnb-wrap .gnb .gnb-nav > li > ul > li.active > a {color: var(--primary-color);background: none}
 	.gnb-wrap .gnb .gnb-nav > li > ul > li > a .sub-caret {position: absolute;right: 10px;top: 50%;transform: translateY(-50%);color: var(--text-color-light);}
