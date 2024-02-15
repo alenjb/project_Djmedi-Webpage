@@ -62,7 +62,7 @@ $item_view = 'zoom';
 	                <?php } ?>
 
 	                <?php /* 로고 */ ?>
-	                <a href="<?php echo G5_URL; ?>">
+	                <a href="<?php echo "http://192.168.0.12:8888/g5/"; ?>">
 	                    <?php if ($logo == 'text') { ?>
 	                        <span><?php echo $config['cf_title']; ?></span>
 	                    <?php } else if ($logo == 'image') { ?>
@@ -177,18 +177,18 @@ $item_view = 'zoom';
 							<?php } ?>
 							<?php } ?>
 						</ul>
-						
-						<div class="category-nav">
-							<ul>
-								<li><a href="<?php echo G5_SHOP_URL; ?>/wishlist.php">WHISLIST</a></li>
-								<li><a href="<?php echo G5_SHOP_URL; ?>/couponzone.php">COUPON</a></li>
-								<li><a href="<?php echo G5_BBS_URL ?>/faq.php">FAQ</a></li>
-								<li><a href="<?php echo G5_BBS_URL ?>/qalist.php">Q&amp;A</a></li>
-								<li class="last-link"><a href="<?php echo G5_SHOP_URL; ?>">STORE</a></li>
-							</ul>
-						</div>
-					</nav>
-				</div>
+
+                        <div class="category-nav">
+                            <ul>
+                                <li><a href="<?php echo G5_SHOP_URL; ?>/wishlist.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">찜</a></li>
+                                <li><a href="<?php echo G5_SHOP_URL; ?>/couponzone.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">쿠폰</a></li>
+                                <li><a href="<?php echo G5_BBS_URL ?>/faq.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">FAQ</a></li>
+                                <li><a href="<?php echo G5_BBS_URL ?>/qalist.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">Q&amp;A</a></li>
+                                <li class="last-link"><a href="<?php echo "" ?>" style="font-family: Pretendard-Regular, serif; font-size: 20px;">회사소개</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
 				
 				<?php /* Tob Bar - 로그인, 회원가입 및 검색 버튼 */ ?>
 				<div class="top-bar">
@@ -335,9 +335,9 @@ $item_view = 'zoom';
 			</div>
 			<div class="container">
 				<div class="page-title-caption">
-					<h2><?php echo $subinfo['subtitle']; ?></h2>
+					<h2 style="font-family: Pretendard-Regular,serif"><?php echo $subinfo['subtitle']; ?></h2>
 					<?php if (!$it_id) { ?>
-					<ul class="breadcrumb">
+					<ul class="breadcrumb" style="font-family: Pretendard-Regular,serif">
 						<?php echo $subinfo['path']; ?>
 					</ul>
 					<?php } ?>
