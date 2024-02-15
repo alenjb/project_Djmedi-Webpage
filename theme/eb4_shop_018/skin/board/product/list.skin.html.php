@@ -229,8 +229,10 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/sweetal
                     </span>
                     <?php } ?>
                 </h4>
-                <h6><?php echo $list[$i]['wr_6']; ?></h6>
                 <dl class="product-dl">
+                    <dt><?php echo $board['bo_6_subj']; ?></dt>
+                    <dd><?php echo $list[$i]['wr_6']; ?></dd>
+                </dl>                <dl class="product-dl">
                     <dt><?php echo $board['bo_7_subj']; ?></dt>
                     <dd><?php echo $list[$i]['wr_7']; ?></dd>
                 </dl>
