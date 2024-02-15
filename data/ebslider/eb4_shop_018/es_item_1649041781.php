@@ -1,0 +1,6 @@
+<?php
+if (!defined('_EYOOM_')) exit;
+$es_item = array(
+	"0" => array("ei_no" => "35","es_code" => "1649041781","ei_theme" => "eb4_shop_018","ei_state" => "1","ei_sort" => "1","ei_title" => "LW-3 Make Up Pack","ei_subtitle" => "Beautify the complexion","ei_text" => "전세계 250만개 판매 베스트 셀러 아이템 <br>글로벌 사용자들이 선택하고 사용한 아이템을 지금 만나보세요.","ei_link" => "a:1:{i:0;s:51:\"http://eb4_shop_018.eyoom.kr/shop/list.php?ca_id=20\";}","ei_target" => "a:1:{i:0;s:0:\"\";}","ei_img" => "a:2:{i:0;s:36:\"1236cb2ac0d1e7d3d0f0a36e0ad63fe4.jpg\";i:1;s:36:\"3abcfbd10ad59292055047e5126e0186.jpg\";}","ei_period" => "1","ei_start" => "","ei_end" => "","ei_clicked" => "0","ei_view_level" => "1","ei_regdt" => "2022-05-12 17:04:34"),
+	"1" => array("ei_no" => "36","es_code" => "1649041781","ei_theme" => "eb4_shop_018","ei_state" => "1","ei_sort" => "2","ei_title" => "LW-7 Face Skin Pack","ei_subtitle" => "Beautify the complexion","ei_text" => "전세계 250만개 판매 베스트 셀러 아이템 <br>글로벌 사용자들이 선택하고 사용한 아이템을 지금 만나보세요.","ei_link" => "a:1:{i:0;s:51:\"http://eb4_shop_018.eyoom.kr/shop/list.php?ca_id=10\";}","ei_target" => "a:1:{i:0;s:0:\"\";}","ei_img" => "a:2:{i:0;s:36:\"878ed4f2b0f64d578685818e86e798d2.jpg\";i:1;s:36:\"a23cbb90f852af6cf868d29e526a5b44.jpg\";}","ei_period" => "1","ei_start" => "","ei_end" => "","ei_clicked" => "0","ei_view_level" => "1","ei_regdt" => "2022-05-12 17:05:25"),
+);
