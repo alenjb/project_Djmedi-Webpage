@@ -70,7 +70,7 @@ if (!defined('_EYOOM_')) exit;
         <?php if (is_array($contents)) { ?>
             <?php foreach ($contents as $k => $item) { ?>
             <div class="item item-<?php echo $k + 1 ?>">
-                <div class="item-image" style="background-image:url(<?php echo $item['src_1']?>)">
+                <div class="item-image" style="background-image:url(<?php echo "theme/eb4_shop_018/skin/ebcontents/shop018_title_banner/image/002.png"?>)">
                     <img src="<?php echo $item['src_2']?>" alt="image">
                 </div>
                 <div class="item-content">
@@ -82,7 +82,7 @@ if (!defined('_EYOOM_')) exit;
 		            <?php } ?>
                 </div>
                 <?php if ($item['href_1']) { ?>
-	            <div class="btn-more btn-wht"><a href="<?php echo $item['href_1']; ?>" target="<?php echo $item['target_1']; ?>">More View</a></div>
+	            <div class="btn-more btn-wht" style="font-family: Pretendard-Regular, serif;"><a href="<?php echo $item['href_1']; ?>" target="<?php echo $item['target_1']; ?>">More View</a></div>
                 <?php } ?>
             </div>
             <?php } ?>
