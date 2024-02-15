@@ -40,7 +40,7 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/fotoram
 .board-view .product-dl dt {padding: 5px 10px;font-size: 1rem;border-bottom: 1px solid #909090;}
 .board-view .product-dl dd {padding: 5px 10px;font-size: 0.875rem;}
 @media (min-width:768px){
-    .board-view .product-dl {padding-left:20px;}
+    .board-view .product-dl {padding-top:20px;}
 }
 
 /* 하단 이전 다음글, 목록 버튼 */
@@ -279,11 +279,11 @@ button.mfp-close {position:fixed;color:#fff !important}
     <?php } ?>
     <?php /* 소셜버튼 끝 */?>
 
-    <?php if($member['mb_level'] >= $board['bo_comment_level'] ){?>
-    <?php /* 댓글 시작 */?>
-    <?php include_once(G5_BBS_PATH . '/view_comment.php'); ?>
-    <?php /* 댓글 끝 */?>
-    <?php } ?>
+<!--    --><?php //if($member['mb_level'] >= $board['bo_comment_level'] ){?>
+<!--    --><?php ///* 댓글 시작 */?>
+<!--    --><?php //include_once(G5_BBS_PATH . '/view_comment.php'); ?>
+<!--    --><?php ///* 댓글 끝 */?>
+<!--    --><?php //} ?>
 
     <?php /* 링크 버튼 시작 */?>
     <div class="board-view-bot">
