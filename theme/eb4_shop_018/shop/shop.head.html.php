@@ -21,6 +21,26 @@ $item_view = 'zoom';
 <?php if (!$wmode) { ?>
 
 <?php /*----- wrapper 시작 -----*/ ?>
+<style>
+    @font-face {
+        font-family: 'Pretendard-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Pretendard-Bold';
+        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+        font-weight: 900;
+        font-style: normal;
+    }
+        /*div.header-inner{*/
+        /*    height: 100px;*/
+        /*}*/
+        ul.gnb-nav > li > a{
+            font-size: 30px;
+        }
+</style>
 <div class="wrapper">
     <h1 id="hd-h1"><?php echo $g5['title'] ?></h1>
     <div class="to-content"><a href="#container">본문 바로가기</a></div>
@@ -65,7 +85,7 @@ $item_view = 'zoom';
 	                <?php } ?>
 
 	                <?php /* 로고 */ ?>
-	                <a href="<?php echo G5_SHOP_URL; ?>">
+	                <a href="<?php echo "http://192.168.0.12:8888/g5/"; ?>">
 	                    <?php if ($logo == 'text') { ?>
 	                        <span><?php echo $config['cf_title']; ?></span>
 	                    <?php } else if ($logo == 'image') { ?>
@@ -213,11 +233,11 @@ $item_view = 'zoom';
 						
 						<div class="category-nav">
 							<ul>
-								<li><a href="<?php echo G5_SHOP_URL; ?>/wishlist.php">WHISLIST</a></li>
-								<li><a href="<?php echo G5_SHOP_URL; ?>/couponzone.php">COUPON</a></li>
-								<li><a href="<?php echo G5_BBS_URL ?>/faq.php">FAQ</a></li>
-								<li><a href="<?php echo G5_BBS_URL ?>/qalist.php">Q&amp;A</a></li>
-								<li class="last-link"><a href="<?php echo G5_URL; ?>">COMPANY</a></li>
+								<li><a href="<?php echo G5_SHOP_URL; ?>/wishlist.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">찜</a></li>
+								<li><a href="<?php echo G5_SHOP_URL; ?>/couponzone.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">쿠폰</a></li>
+								<li><a href="<?php echo G5_BBS_URL ?>/faq.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">FAQ</a></li>
+								<li><a href="<?php echo G5_BBS_URL ?>/qalist.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">Q&amp;A</a></li>
+								<li class="last-link"><a href="<?php echo "http://192.168.0.12:8888/g5/page/?pid=overview" ?>" style="font-family: Pretendard-Regular, serif; font-size: 20px;">회사소개</a></li>
 							</ul>
 						</div>
 					</nav>
