@@ -101,12 +101,12 @@ if (!defined('_EYOOM_')) exit;
             </div>
             <div class="item-content">
                 <?php if ($item['ci_subject_1']) { ?>
-                <h4 data-aos="fade-up"><?php echo $item['ci_subject_1']; ?>
+                <h4 ><?php echo $item['ci_subject_1']; ?>
                     <?php if ($item['ci_subject_2']) { ?><small><?php echo $item['ci_subject_2']; ?></small><?php } ?>
                 </h4>
                 <?php } ?>
                 <?php if ($item['ci_text_1']) { ?>
-                <p data-aos="fade-up" data-aos-delay="150"><?php echo $item['ci_text_1']; ?></p>
+                <p ><?php echo $item['ci_text_1']; ?></p>
                 <?php } ?>
             </div>
         </div>
@@ -119,8 +119,8 @@ if (!defined('_EYOOM_')) exit;
                 <img src="<?php echo $ebcontents_skin_url; ?>/image/01.jpg" alt="image">
             </div>
             <div class="item-content">
-                <h4 data-aos="fade-up">라이트벌브<small class="en-font">Light Bulb</small></h4>
-                <p data-aos="fade-up" data-aos-delay="150">Spirit Of Space, 공간의 영혼을 디자인하는 마음으로 공간이 그 자체로서 개성을 드러내며 풍부한 경험을 전달할 수 있도록 독창적인 사고와 감성을 바탕으로 한 디자인을 선보이고자 합니다.</p>
+                <h4 >라이트벌브<small class="en-font">Light Bulb</small></h4>
+                <p >Spirit Of Space, 공간의 영혼을 디자인하는 마음으로 공간이 그 자체로서 개성을 드러내며 풍부한 경험을 전달할 수 있도록 독창적인 사고와 감성을 바탕으로 한 디자인을 선보이고자 합니다.</p>
             </div>
         </div>
     <?php } ?>

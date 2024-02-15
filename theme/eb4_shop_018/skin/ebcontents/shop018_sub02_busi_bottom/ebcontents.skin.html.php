@@ -126,7 +126,7 @@ if (!defined('_EYOOM_')) exit;
         <?php if (is_array($contents)) { ?>
             <?php foreach ($contents as $k => $item) { ?>
             <div class="col-md-4">
-                <div class="item item-<?php echo $k + 1 ?>" data-aos="fade-up" data-aos-delay="<?php echo ($k + 1)*3 ?>00">
+                <div class="item item-<?php echo $k + 1 ?>" data-aos-delay="<?php echo ($k + 1)*3 ?>00">
                     <div class="item-content">
                         <div class="content-num">0<?php echo $k + 1 ?></div>
                         <?php if ($item['ci_subject_1']) { ?>
