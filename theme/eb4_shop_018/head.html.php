@@ -16,7 +16,32 @@ $item_view = 'zoom';
 ?>
 
 <?php if (!$wmode) { ?>
-
+    <style>
+        @font-face {
+            font-family: 'Pretendard-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Pretendard-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+            font-weight: 900;
+            font-style: normal;
+        }
+        /*div.header-inner{*/
+        /*    height: 100px;*/
+        /*}*/
+        ul.gnb-nav > li > a{
+            font-size: 30px;
+        }
+        li.dropdown {
+            font-family: Pretendard-Bold, serif;
+        }
+        ul.dropdown-menu > li > a{
+            font-size: var(--normal-font-size);
+        }
+</style>
 <?php /*----- wrapper 시작 -----*/ ?>
 <div class="wrapper">
     <h1 id="hd-h1"><?php echo $g5['title'] ?></h1>
@@ -62,7 +87,7 @@ $item_view = 'zoom';
 	                <?php } ?>
 
 	                <?php /* 로고 */ ?>
-	                <a href="<?php echo "http://192.168.0.12:8888/g5/"; ?>">
+	                <a href="<?php echo "http://192.168.0.12:8888/"; ?>">
 	                    <?php if ($logo == 'text') { ?>
 	                        <span><?php echo $config['cf_title']; ?></span>
 	                    <?php } else if ($logo == 'image') { ?>
@@ -152,7 +177,7 @@ $item_view = 'zoom';
 										<?php } ?>
 											<li class="dropdown-submenu <?php if (isset($menu_3['active']) && $menu_3['active']) echo 'active';?>">
 												<a href="<?php echo $menu_3['me_link']; ?>" target="_<?php echo $menu_3['me_target']; ?>" class="dropdown-item nav-link">
-													<span class="submenu-marker"></span>
+													<span class="submenu-marker" style="font-family: Pretendard-Bold"></span>
 													<?php if (isset($menu_3['me_icon']) && $menu_3['me_icon']) { ?>
 													<i class="<?php echo $menu_3['me_icon']; ?> m-r-5"></i>
 													<?php } ?>
@@ -180,11 +205,10 @@ $item_view = 'zoom';
 
                         <div class="category-nav">
                             <ul>
+                                <li><a href="/bbs/board.php?bo_table=notice" style="font-family: Pretendard-Regular, serif; font-size: 20px;">공지사항</a></li>
                                 <li><a href="<?php echo G5_SHOP_URL; ?>/wishlist.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">찜</a></li>
-                                <li><a href="<?php echo G5_SHOP_URL; ?>/couponzone.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">쿠폰</a></li>
-                                <li><a href="<?php echo G5_BBS_URL ?>/faq.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">FAQ</a></li>
-                                <li><a href="<?php echo G5_BBS_URL ?>/qalist.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">Q&amp;A</a></li>
-                                <li class="last-link"><a href="<?php echo "" ?>" style="font-family: Pretendard-Regular, serif; font-size: 20px;">회사소개</a></li>
+                                <li class="last-link"><a href="<?php echo "http://192.168.0.12:8888/page/?pid=overview" ?>" style="font-family: Pretendard-Regular, serif; font-size: 20px;">회사소개</a></li>
+                                <li class="last-link"><a href="<?php echo "http://192.168.0.12:8888/page/?pid=brand" ?>" style="font-family: Pretendard-Regular, serif; font-size: 20px; background-color: rgb(210,186,186)">제약사소개</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -193,37 +217,39 @@ $item_view = 'zoom';
 				<?php /* Tob Bar - 로그인, 회원가입 및 검색 버튼 */ ?>
 				<div class="top-bar">
 					<ul class="top-bar-list list-unstyled">
-					<?php if ($is_member) { ?>
-						<li class="top-bar-btn-adm">
-							<a type="button" data-bs-toggle="modal" data-bs-target=".member-contents-modal">
-								<img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/user-line.png" alt="icon">
-							</a>
-						</li>
-					<?php } else { ?>
-						<li class="top-bar-btn-login">
-							<a href="<?php echo G5_BBS_URL ?>/login.php">
-								<img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/shut-down-line.png" alt="icon">
-							</a>
-						</li>
-					<?php } ?>
-						<?php /* 검색버튼 */ ?>
-						<li class="btn-cart">
-							<a href="<?php echo G5_SHOP_URL; ?>/cart.php">
-								<img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/shopping-bag-line.png" alt="icon">
-								<span><?php echo get_boxcart_datas_count(); ?></span>
-							</a>
-						</li>
-						<li class="btn-search">
-							<a href="#" data-bs-toggle="modal" data-bs-target=".search-contents-modal">
-								<img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/search-line.png" alt="icon">
-							</a>
-						</li>
-						<?php /* 모바일 메뉴 버튼 */ ?>
-						<li class="mobile-nav-trigger" id="navToggle" role="button">
-							<button type="button">
-								<img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/function-line.png" alt="icon">
-							</button>
-						</li>
+
+                        <li class="btn-cart">
+                            <a href="<?php echo G5_SHOP_URL; ?>/cart.php">
+                                <!--								<img src="--><?php //echo EYOOM_THEME_URL; ?><!--/image/icons/shopping-bag-line.png" alt="icon">-->
+                                <h5>장바구니</h5>
+                                <span style="font-family: Pretendard-Bold"><?php echo get_boxcart_datas_count(); ?></span>
+                            </a>
+                        </li>
+                        <li><a href="<?php echo G5_SHOP_URL; ?>/wishlist.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">찜</a></li>
+                        <?php if ($is_member) { ?>
+                            <li class="top-bar-btn-adm">
+                                <a type="button" data-bs-toggle="modal" data-bs-target=".member-contents-modal">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/user-line.png" alt="icon">
+                                </a>
+                            </li>
+                        <?php } else { ?>
+                            <li class="top-bar-btn-login">
+                                <a href="<?php echo G5_BBS_URL ?>/login.php">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/user-line.png" alt="icon">
+                                </a>
+                            </li>
+                        <?php } ?>
+                        <li class="btn-search">
+                            <a href="#" data-bs-toggle="modal" data-bs-target=".search-contents-modal">
+                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/search-line.png" alt="icon">
+                            </a>
+                        </li>
+                        <?php /* 모바일 메뉴 버튼 */ ?>
+                        <li class="mobile-nav-trigger" id="navToggle" role="button">
+                            <button type="button">
+                                <img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/function-line.png" alt="icon">
+                            </button>
+                        </li>
 					</ul>
 				</div>
 		    </div>
@@ -352,33 +378,33 @@ $item_view = 'zoom';
 	        <?php } else { ?>
 	        <div class="container">
 		        <?php /* ------------- submenu - 서브메뉴 ------------- */ ?>
-                <div class="submenu clear-after">
-                    <div class="sub-home-link"><a href="<?php echo G5_URL ?>"><i class="fa fa-home"></i></a></div>
-                    <div class="submenu-title submenu-title-first">
-                        <h2><?php echo $subinfo['subtitle']; ?></h2>
-                        <ul class="list-submenu list-unstyled">
-                            <?php if (isset($menu) && is_array($menu)) { ?>
-                            <?php foreach ($menu as $key => $menu_1) { ?>
-                            <li class="<?php if (isset($menu_1['active']) && $menu_1['active']) echo 'active'; ?>">
-                                <a href="<?php echo $menu_1['me_link']; ?>"><?php echo $menu_1['me_name']?></a>
-                            </li>
-                            <?php } ?>
-                            <?php } ?>
-                        </ul>
-                    </div>
-                    <div class="submenu-title submenu-title-second">
-                        <h2><?php echo $subinfo['title']; ?></h2>
-                        <ul class="list-submenu list-unstyled">
-                            <?php if (isset($sidemenu) && is_array($sidemenu)) { ?>
-                            <?php foreach ($sidemenu as $key => $smenu) { ?>
-                            <li class="<?php if ($smenu['active']) echo 'active'; ?>">
-                                <a href="<?php echo $smenu['me_link']; ?>" target="_<?php echo $smenu['me_target']; ?>"><?php echo $smenu['me_name']; ?></a>
-                            </li>
-                            <?php } ?>
-                            <?php } ?>
-                        </ul>
-                    </div>
-                </div>
+<!--                <div class="submenu clear-after">-->
+<!--                    <div class="sub-home-link"><a href="--><?php //echo G5_URL ?><!--"><i class="fa fa-home"></i></a></div>-->
+<!--                    <div class="submenu-title submenu-title-first">-->
+<!--                        <h2>--><?php //echo $subinfo['subtitle']; ?><!--</h2>-->
+<!--                        <ul class="list-submenu list-unstyled">-->
+<!--                            --><?php //if (isset($menu) && is_array($menu)) { ?>
+<!--                            --><?php //foreach ($menu as $key => $menu_1) { ?>
+<!--                            <li class="--><?php //if (isset($menu_1['active']) && $menu_1['active']) echo 'active'; ?><!--">-->
+<!--                                <a href="--><?php //echo $menu_1['me_link']; ?><!--">--><?php //echo $menu_1['me_name']?><!--</a>-->
+<!--                            </li>-->
+<!--                            --><?php //} ?>
+<!--                            --><?php //} ?>
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                    <div class="submenu-title submenu-title-second">-->
+<!--                        <h2>--><?php //echo $subinfo['title']; ?><!--</h2>-->
+<!--                        <ul class="list-submenu list-unstyled">-->
+<!--                            --><?php //if (isset($sidemenu) && is_array($sidemenu)) { ?>
+<!--                            --><?php //foreach ($sidemenu as $key => $smenu) { ?>
+<!--                            <li class="--><?php //if ($smenu['active']) echo 'active'; ?><!--">-->
+<!--                                <a href="--><?php //echo $smenu['me_link']; ?><!--" target="_--><?php //echo $smenu['me_target']; ?><!--">--><?php //echo $smenu['me_name']; ?><!--</a>-->
+<!--                            </li>-->
+<!--                            --><?php //} ?>
+<!--                            --><?php //} ?>
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
                 
 	            <div class="basic-body-main">
 	        <?php } ?>

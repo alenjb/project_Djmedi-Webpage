@@ -40,6 +40,9 @@ $item_view = 'zoom';
         ul.gnb-nav > li > a{
             font-size: 30px;
         }
+    li.dropdown {
+        font-family: Pretendard-Bold, serif;
+    }
 </style>
 <div class="wrapper">
     <h1 id="hd-h1"><?php echo $g5['title'] ?></h1>
@@ -85,7 +88,7 @@ $item_view = 'zoom';
 	                <?php } ?>
 
 	                <?php /* 로고 */ ?>
-	                <a href="<?php echo "http://192.168.0.12:8888/g5/"; ?>">
+	                <a href="<?php echo "http://192.168.0.12:8888/"; ?>">
 	                    <?php if ($logo == 'text') { ?>
 	                        <span><?php echo $config['cf_title']; ?></span>
 	                    <?php } else if ($logo == 'image') { ?>
@@ -233,12 +236,11 @@ $item_view = 'zoom';
 						
 						<div class="category-nav">
 							<ul>
-								<li><a href="<?php echo G5_SHOP_URL; ?>/wishlist.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">찜</a></li>
-								<li><a href="<?php echo G5_SHOP_URL; ?>/couponzone.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">쿠폰</a></li>
-								<li><a href="<?php echo G5_BBS_URL ?>/faq.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">FAQ</a></li>
-								<li><a href="<?php echo G5_BBS_URL ?>/qalist.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">Q&amp;A</a></li>
-								<li class="last-link"><a href="<?php echo "http://192.168.0.12:8888/g5/page/?pid=overview" ?>" style="font-family: Pretendard-Regular, serif; font-size: 20px;">회사소개</a></li>
-							</ul>
+								<li><a href="/bbs/board.php?bo_table=notice" style="font-family: Pretendard-Regular, serif; font-size: 20px;">공지사항</a></li>
+                                <li class="last-link"><a href="<?php echo "http://192.168.0.12:8888/page/?pid=overview" ?>" style="font-family: Pretendard-Regular, serif; font-size: 20px;">회사소개</a></li>
+                                <li class="last-link"><a href="<?php echo "http://192.168.0.12:8888/page/?pid=brand" ?>" style="font-family: Pretendard-Regular, serif; font-size: 20px; background-color: rgb(210,186,186)">제약사소개</a></li>
+
+                            </ul>
 						</div>
 					</nav>
 				</div>
@@ -246,27 +248,29 @@ $item_view = 'zoom';
 				<?php /* Tob Bar - 로그인, 회원가입 및 검색 버튼 */ ?>
 				<div class="top-bar">
 					<ul class="top-bar-list list-unstyled">
-					<?php if ($is_member) { ?>
-						<li class="top-bar-btn-adm">
-							<a type="button" data-bs-toggle="modal" data-bs-target=".member-contents-modal">
-								<img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/user-line.png" alt="icon">
-							</a>
-						</li>
-					<?php } else { ?>
-						<li class="top-bar-btn-login">
-							<a href="<?php echo G5_BBS_URL ?>/login.php">
-								<img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/shut-down-line.png" alt="icon">
-							</a>
-						</li>
-					<?php } ?>
 						<?php /* 검색버튼 */ ?>
 						<li class="btn-cart">
 							<a href="<?php echo G5_SHOP_URL; ?>/cart.php">
-								<img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/shopping-bag-line.png" alt="icon">
-								<span><?php echo get_boxcart_datas_count(); ?></span>
+<!--								<img src="--><?php //echo EYOOM_THEME_URL; ?><!--/image/icons/shopping-bag-line.png" alt="icon">-->
+								<h5>장바구니</h5>
+                                <span style="font-family: Pretendard-Bold"><?php echo get_boxcart_datas_count(); ?></span>
 							</a>
 						</li>
-						<li class="btn-search">
+                        <li><a href="<?php echo G5_SHOP_URL; ?>/wishlist.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">찜</a></li>
+                        <?php if ($is_member) { ?>
+                            <li class="top-bar-btn-adm">
+                                <a type="button" data-bs-toggle="modal" data-bs-target=".member-contents-modal">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/user-line.png" alt="icon">
+                                </a>
+                            </li>
+                        <?php } else { ?>
+                            <li class="top-bar-btn-login">
+                                <a href="<?php echo G5_BBS_URL ?>/login.php">
+                                    <img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/user-line.png" alt="icon">
+                                </a>
+                            </li>
+                        <?php } ?>
+                        <li class="btn-search">
 							<a href="#" data-bs-toggle="modal" data-bs-target=".search-contents-modal">
 								<img src="<?php echo EYOOM_THEME_URL; ?>/image/icons/search-line.png" alt="icon">
 							</a>

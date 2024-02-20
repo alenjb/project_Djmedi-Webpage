@@ -74,7 +74,7 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/slick/s
     .main-slider-<?php echo $es_code; ?> .item-content h4 {margin-bottom: 10px;}
 }
 @media(min-width:992px) {
-    .main-slider-<?php echo $es_code; ?> .item-image {height: 550px;}
+    .main-slider-<?php echo $es_code; ?> .item-image {height: 250px;}
     .main-slider-<?php echo $es_code; ?> .item-content {width:40%;}
     .main-slider-<?php echo $es_code; ?> .item-content p {margin-bottom: 30px;}
 }
@@ -82,7 +82,7 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/slick/s
 	.main-slider-<?php echo $es_code; ?> .item-content h4 {font-size:2.7rem;}
 }
 @media(min-width:1400px) {
-    .main-slider-<?php echo $es_code; ?> .item-image {height: 650px;}
+    .main-slider-<?php echo $es_code; ?> .item-image {height: 350px;}
     .main-slider-<?php echo $es_code; ?> .item-content p {font-size:16px;}
 }
 </style>
@@ -94,8 +94,8 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/slick/s
 		<?php if (is_array($slider)) { ?>
 			<?php foreach ($slider as $k => $item) { ?>
 			<div class="item item-<?php echo $k + 1 ?>">
-                <div class="item-image" style="background-image:url(<?php echo $item['src_1']?>)">
-                    <img src="<?php echo $item['src_2']?>" alt="image" class="img-responsive visible-xs">
+                <div class="item-image" style="background-image:url(<?php echo $item['src_1']?>) ">
+                    <img src="<?php echo $item['src_2']?>" alt="" class="img-responsive visible-xs">
                 </div>
                 
                 <div class="container">

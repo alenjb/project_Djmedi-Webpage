@@ -1,0 +1,6 @@
+<?php
+if (!defined('_EYOOM_')) exit;
+$es_item = array(
+	"0" => array("ei_no" => "29","es_code" => "1648180705","ei_theme" => "eb4_shop_017","ei_state" => "1","ei_sort" => "1","ei_title" => "Beautiful <strong>Lightbulb</strong>","ei_subtitle" => "전등 사업의 미래를 개척하는 창의적 기업","ei_text" => "아름다운 빛의 세계를 만나다. <br>라이트벌브가 세로운 세계로 안내합니다.","ei_link" => "a:1:{i:0;s:33:\"http://eb4_shop_017.eyoom.kr/shop\";}","ei_target" => "a:1:{i:0;s:0:\"\";}","ei_img" => "a:2:{i:0;s:36:\"53439ff9c8d88c0d3f310832e9819aaf.jpg\";i:1;s:36:\"2e174e46c9986eaffde05e39ce175746.jpg\";}","ei_period" => "1","ei_start" => "","ei_end" => "","ei_clicked" => "0","ei_view_level" => "1","ei_regdt" => "2022-03-25 13:55:57"),
+	"1" => array("ei_no" => "30","es_code" => "1648180705","ei_theme" => "eb4_shop_017","ei_state" => "1","ei_sort" => "2","ei_title" => "Natural <strong>Lightbulb</strong>","ei_subtitle" => "환경과 자연을 생각하는 친환경 기업","ei_text" => "아름다운 빛의 세계를 만나다. <br>라이트벌브가 세로운 세계로 안내합니다.","ei_link" => "a:1:{i:0;s:33:\"http://eb4_shop_017.eyoom.kr/shop\";}","ei_target" => "a:1:{i:0;s:0:\"\";}","ei_img" => "a:2:{i:0;s:36:\"d7ffea910503a9264952cb2fe54c3c6f.jpg\";i:1;s:36:\"8ea37b629c0d9407a8cc19c6744f80e1.jpg\";}","ei_period" => "1","ei_start" => "","ei_end" => "","ei_clicked" => "0","ei_view_level" => "1","ei_regdt" => "2022-03-25 13:56:18"),
+);

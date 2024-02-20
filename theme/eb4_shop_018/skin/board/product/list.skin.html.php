@@ -236,14 +236,14 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/sweetal
                     <dt><?php echo $board['bo_7_subj']; ?></dt>
                     <dd><?php echo $list[$i]['wr_7']; ?></dd>
                 </dl>
-                <dl class="product-dl">
-                    <dt><?php echo $board['bo_8_subj']; ?></dt>
-                    <dd><?php echo $list[$i]['wr_8']; ?></dd>
-                </dl>
-                <dl class="product-dl">
-                    <dt><?php echo $board['bo_9_subj']; ?></dt>
-                    <dd><?php echo $list[$i]['wr_9']; ?></dd>
-                </dl>
+<!--                <dl class="product-dl">-->
+<!--                    <dt>--><?php //echo $board['bo_8_subj']; ?><!--</dt>-->
+<!--                    <dd>--><?php //echo $list[$i]['wr_8']; ?><!--</dd>-->
+<!--                </dl>-->
+<!--                <dl class="product-dl">-->
+<!--                    <dt>--><?php //echo $board['bo_9_subj']; ?><!--</dt>-->
+<!--                    <dd>--><?php //echo $list[$i]['wr_9']; ?><!--</dd>-->
+<!--                </dl>-->
                 <?php if ($list[$i]['content']) { ?>
                 <p class="product-cont">
                     <?php if (!G5_IS_MOBILE) { ?>

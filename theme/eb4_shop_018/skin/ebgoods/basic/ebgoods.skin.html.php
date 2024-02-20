@@ -148,14 +148,14 @@ if (!defined('_EYOOM_')) exit;
                                 <div class="goods-info"><?php echo $data['it_basic']?></div>
                                 <?php } ?>
 
-                                <?php if ($eb_goods['gi_view_sns'] == 'y') { ?>
-                                <div class="goods-sns">
-                                    <ul>
-                                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $data['sns_url']; ?>&amp;p=<?php echo $data['sns_title']; ?>" target="_blank" class="facebook-icon" title="페이스북"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/share?url=<?php echo $data['sns_url']; ?>&amp;text=<?php echo $data['sns_title']; ?>" target="_blank" class="twitter-icon" title="트위터"><i class="fab fa-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                                <?php } ?>
+<!--                                --><?php //if ($eb_goods['gi_view_sns'] == 'y') { ?>
+<!--                                <div class="goods-sns">-->
+<!--                                    <ul>-->
+<!--                                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=--><?php //echo $data['sns_url']; ?><!--&amp;p=--><?php //echo $data['sns_title']; ?><!--" target="_blank" class="facebook-icon" title="페이스북"><i class="fab fa-facebook-f"></i></a></li>-->
+<!--                                        <li><a href="https://twitter.com/share?url=--><?php //echo $data['sns_url']; ?><!--&amp;text=--><?php //echo $data['sns_title']; ?><!--" target="_blank" class="twitter-icon" title="트위터"><i class="fab fa-twitter"></i></a></li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                                --><?php //} ?>
                             </div>
 
                             <?php if ($is_admin == 'super' && !G5_IS_MOBILE) { ?>

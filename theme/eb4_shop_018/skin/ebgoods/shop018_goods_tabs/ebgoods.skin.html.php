@@ -144,14 +144,14 @@ if (!defined('_EYOOM_')) exit;
                                 <?php echo $data['it_icon']; ?>
                             <?php } ?>
 
-                            <?php if ($eb_goods['gi_view_sns'] == 'y') { ?>
-                            <div class="goods-sns">
-                                <ul>
-                                    <li class="s-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $data['sns_url']; ?>&amp;p=<?php echo $data['sns_title']; ?>" target="_blank" class="facebook-icon" title="페이스북"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li class="s-twitter"><a href="https://twitter.com/share?url=<?php echo $data['sns_url']; ?>&amp;text=<?php echo $data['sns_title']; ?>" target="_blank" class="twitter-icon" title="트위터"><i class="fab fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                            <?php } ?>
+<!--                            --><?php //if ($eb_goods['gi_view_sns'] == 'y') { ?>
+<!--                            <div class="goods-sns">-->
+<!--                                <ul>-->
+<!--                                    <li class="s-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=--><?php //echo $data['sns_url']; ?><!--&amp;p=--><?php //echo $data['sns_title']; ?><!--" target="_blank" class="facebook-icon" title="페이스북"><i class="fab fa-facebook-f"></i></a></li>-->
+<!--                                    <li class="s-twitter"><a href="https://twitter.com/share?url=--><?php //echo $data['sns_url']; ?><!--&amp;text=--><?php //echo $data['sns_title']; ?><!--" target="_blank" class="twitter-icon" title="트위터"><i class="fab fa-twitter"></i></a></li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                            --><?php //} ?>
                         </div>
 
                         <div class="goods-description">

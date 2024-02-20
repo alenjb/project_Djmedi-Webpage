@@ -108,6 +108,11 @@ if (!defined('_EYOOM_')) exit;
         padding: 50px;
     }
 }
+.content-num img{
+    width: 100%; /* 이미지가 div의 너비에 맞게 조정됩니다 */
+    height: auto; /* 이미지의 높이를 자동으로 조정하여 비율을 유지합니다 */
+    display: block; /* 이미지가 블록 요소로 표시되도록 설정합니다 */
+}
 </style>
 
 <div class="ebcontents ebcontents-busi-bottom">
@@ -131,6 +136,9 @@ if (!defined('_EYOOM_')) exit;
                         <div class="content-num">0<?php echo $k + 1 ?></div>
                         <?php if ($item['ci_subject_1']) { ?>
                         <h4><?php echo $item['ci_subject_1']; ?></h4>
+                            <div class="content-num">
+                                <img class="content-num" src="/data/brand_image/0<?php echo$k + 1 ?>.jpg">
+                            </div>
                         <?php } ?>
                         <?php if ($item['ci_subject_2']) { ?>
                         <p><?php echo $item['ci_subject_2']; ?></ㅔ>
