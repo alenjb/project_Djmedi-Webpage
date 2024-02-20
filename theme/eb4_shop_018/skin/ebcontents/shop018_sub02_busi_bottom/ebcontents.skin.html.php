@@ -137,20 +137,31 @@ if (!defined('_EYOOM_')) exit;
                         <?php if ($item['ci_subject_1']) { ?>
                         <h4><?php echo $item['ci_subject_1']; ?></h4>
                             <div class="content-num">
-                                <img class="content-num" src="/data/brand_image/0<?php echo$k + 1 ?>.jpg">
+                                <?php
+                                if ($k == 0) { // 광명당 제약
+                                    $href = "http://kmdm.co.kr/intro/intro.php";
+                                } elseif ($k == 1) { // 보국제약
+                                    $href = "http://www.xn--3e0bl80alnge9p.kr/";
+                                } elseif ($k == 2) { // 대한쎌팜
+                                    $href = "http://www.dhcp.kr/";
+                                } elseif($k == 3) { //대연제약
+                                    $href = "http://www.dypharm.co.kr/";
+                                }
+                                ?>
+                                <a href="<?php echo $href; ?>"><img class="content-num" src="/data/brand_image/0<?php echo$k + 1 ?>.jpg"></a>
                             </div>
                         <?php } ?>
                         <?php if ($item['ci_subject_2']) { ?>
-                        <p><?php echo $item['ci_subject_2']; ?></ㅔ>
+                        <p><?php echo $item['ci_subject_2']; ?></p>
                         <?php } ?>
                         <?php if ($item['ci_subject_3']) { ?>
-                        <p><?php echo $item['ci_subject_3']; ?></ㅔ>
+                        <p><?php echo $item['ci_subject_3']; ?></p>
                         <?php } ?>
                         <?php if ($item['ci_subject_4']) { ?>
-                        <p><?php echo $item['ci_subject_4']; ?></ㅔ>
+                        <p><?php echo $item['ci_subject_4']; ?></p>
                         <?php } ?>
                         <?php if ($item['ci_subject_5']) { ?>
-                        <p><?php echo $item['ci_subject_5']; ?></ㅔ>
+                        <p><?php echo $item['ci_subject_5']; ?></p>
                         <?php } ?>
                     </div>
                 </div>
