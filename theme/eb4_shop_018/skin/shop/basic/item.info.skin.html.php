@@ -63,12 +63,12 @@ if (!defined('_EYOOM_')) exit;
 <?php /* ---------- 상품 정보 끝 ---------- */ ?>
 
 <?php /* ---------- 사용후기 시작 ---------- */ ?>
-<section id="sit_use">
-    <h2 class="h-hidden">사용후기</h2>
-    <?php echo $shop->pg_anchor('sit_use'); ?>
-
-    <div id="itemuse"><?php include_once($skin_dir.'/itemuse.php'); ?></div>
-</section>
+<!--<section id="sit_use">-->
+<!--    <h2 class="h-hidden">사용후기</h2>-->
+<!--    --><?php //echo $shop->pg_anchor('sit_use'); ?>
+<!---->
+<!--    <div id="itemuse">--><?php //include_once($skin_dir.'/itemuse.php'); ?><!--</div>-->
+<!--</section>-->
 <?php /* ---------- 사용후기 끝 ---------- */ ?>
 
 <?php /* ---------- 상품문의 시작 ---------- */ ?>

@@ -20,7 +20,7 @@
 }
 @media (min-width: 768px) {
     .pg-anchor-in .nav-tabs {border-bottom:none}
-    .pg-anchor-in .nav-tabs li {width:20%}
+    .pg-anchor-in .nav-tabs li {width:25%}
     .pg-anchor-in .nav-tabs li a {display:block;border:1px solid #d5d5d5;font-size:.9375rem;padding:12px 10px;text-align:center;margin-right:0;margin-left:-1px;background:#f8f8f8;color:#959595;border-bottom:none !important}
     .pg-anchor-in .nav-tabs li a:hover {color:#000}
     .pg-anchor-in .nav-tabs li a:focus {color:#959595}
