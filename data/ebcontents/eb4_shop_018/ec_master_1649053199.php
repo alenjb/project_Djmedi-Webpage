@@ -1,7 +1,7 @@
 <?php
 if (!defined('_EYOOM_')) exit;
 $ec_master = array(
-	"ec_no" => "30",
+	"ec_no" => "44",
 	"ec_code" => "1649053199",
 	"me_id" => "0",
 	"me_code" => "",
@@ -12,8 +12,8 @@ $ec_master = array(
 	"ec_skin" => "shop018_title_banner_2",
 	"ec_state" => "1",
 	"ec_link" => "",
-	"ec_target" => "_blank",
-	"ec_image" => "7d69ca114857ff7731e229c80bea3e73.jpg",
+	"ec_target" => "",
+	"ec_image" => "7aae5872c39eab94bf3431923a4ec495.jpg",
 	"ec_file" => "",
 	"ec_filename" => "",
 	"ec_sort" => "5",

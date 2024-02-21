@@ -70,7 +70,7 @@ if (!defined('_EYOOM_')) exit;
         <?php if (is_array($contents)) { ?>
             <?php foreach ($contents as $k => $item) { ?>
             <div class="item item-<?php echo $k + 1 ?>">
-                <div class="item-image" style="background-image:url(<?php echo "theme/eb4_shop_018/skin/ebcontents/shop018_title_banner_2/image/02.jpg"?>)">
+                <div class="item-image" style="background-image:url(<?php echo "theme/eb4_shop_018/skin/ebcontents/shop018_title_banner_2/image/pc_image.png"?>)">
                     <img src="<?php echo $item['src_2']?>" alt="image">
                 </div>
                 <div class="item-content">
@@ -91,7 +91,7 @@ if (!defined('_EYOOM_')) exit;
         <?php if ($ec_default) { ?>
             <div class="item item-1">
                 <div class="item-image" style="background-image:url(<?php echo $ebcontents_skin_url; ?>/image/01.jpg)">
-                    <img src="<?php echo $ebcontents_skin_url; ?>/image/01m.jpg" alt="image">
+                    <img src="<?php echo $ebcontents_skin_url; ?>/image/그림2.png" alt="image">
                 </div>
                 <div class="item-content">
                     <h4 class="en-font">New Arrival</h4>
