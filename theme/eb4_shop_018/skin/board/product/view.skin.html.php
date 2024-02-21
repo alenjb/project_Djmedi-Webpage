@@ -202,10 +202,10 @@ button.mfp-close {position:fixed;color:#fff !important}
                         <dd><?php echo $view['wr_6']; ?></dd>
                         <dt><?php echo $board['bo_7_subj']; ?></dt>
                         <dd><?php echo $view['wr_7']; ?></dd>
-<!--                        <dt>--><?php //echo $board['bo_8_subj']; ?><!--</dt>-->
-<!--                        <dd>--><?php //echo $view['wr_8']; ?><!--</dd>-->
-<!--                        <dt>--><?php //echo $board['bo_9_subj']; ?><!--</dt>-->
-<!--                        <dd>--><?php //echo $view['wr_9']; ?><!--</dd>-->
+                        <dt><?php echo $board['bo_8_subj']; ?></dt>
+                        <dd><?php echo $view['wr_8']; ?></dd>
+                        <dt><?php echo $board['bo_9_subj']; ?></dt>
+                        <dd><?php echo $view['wr_9']; ?></dd>
                         <?php /* 관련링크 시작 */?>
                         <?php if (count((array)$view_link) >0) { ?>
                         <?php foreach ($view_link as $k => $vlink) { ?>

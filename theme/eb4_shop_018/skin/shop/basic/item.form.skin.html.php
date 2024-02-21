@@ -148,21 +148,47 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/fotoram
                             */
                             ?>
 
-                            <?php if ($config['cf_use_point']) { // 포인트 사용한다면 ?>
-                            <tr>
-                                <th scope="row">포인트</th>
-                                <td>
-                                    <?php
-                                    if($it['it_point_type'] == 2) {
-                                        echo '구매금액(추가옵션 제외)의 '.$it['it_point'].'%';
-                                    } else {
-                                        $it_point = get_item_point($it);
-                                        echo number_format($it_point).'점';
-                                    }
-                                    ?>
-                                </td>
-                            </tr>
+<!--                            여분필드들을 모두 출력-->
+
+                            <?php for ($i = 0; $i <= 10; $i++) { ?>
+                                <?php if (!empty($it['it_' . $i])) { ?>
+                                    <tr>
+                                        <th scope="row"><?php echo $it['it_' . $i . '_subj']; ?></th>
+                                        <td><?php echo $it['it_' . $i]; ?></td>
+                                    </tr>
+                                <?php } ?>
                             <?php } ?>
+
+                            <?php if ($it['it_maker']) { ?>
+                                <tr>
+                                    <th scope="row">제조사</th>
+                                    <td><?php echo $it['it_maker']; ?></td>
+                                </tr>
+                            <?php } ?>
+
+                            <?php if ($it['it_origin']) { ?>
+                                <tr>
+                                    <th scope="row">원산지</th>
+                                    <td><?php echo $it['it_origin']; ?></td>
+                                </tr>
+                            <?php } ?>
+
+
+                            <!--                            --><?php //if ($config['cf_use_point']) { // 포인트 사용한다면 ?>
+<!--                            <tr>-->
+<!--                                <th scope="row">포인트</th>-->
+<!--                                <td>-->
+<!--                                    --><?php
+//                                    if($it['it_point_type'] == 2) {
+//                                        echo '구매금액(추가옵션 제외)의 '.$it['it_point'].'%';
+//                                    } else {
+//                                        $it_point = get_item_point($it);
+//                                        echo number_format($it_point).'점';
+//                                    }
+//                                    ?>
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                            --><?php //} ?>
 
                             <tr>
                                 <th><?php echo $ct_send_cost_label; ?></th>
@@ -191,20 +217,6 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/fotoram
                             </tr>
                             <?php } ?>
 
-                            <?php if ($it['it_maker']) { ?>
-                            <tr>
-                                <th scope="row">제조사</th>
-                                <td><?php echo $it['it_maker']; ?></td>
-                            </tr>
-                            <?php } ?>
-
-                            <?php if ($it['it_origin']) { ?>
-                            <tr>
-                                <th scope="row">원산지</th>
-                                <td><?php echo $it['it_origin']; ?></td>
-                            </tr>
-                            <?php } ?>
-
                             <?php if ($it['it_brand']) { ?>
                             <tr>
                                 <th scope="row">브랜드</th>
@@ -212,12 +224,12 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/fotoram
                             </tr>
                             <?php } ?>
 
-                            <?php if ($it['it_model']) { ?>
-                            <tr>
-                                <th scope="row">모델</th>
-                                <td><?php echo $it['it_model']; ?></td>
-                            </tr>
-                            <?php } ?>
+<!--                            --><?php //if ($it['it_model']) { ?>
+<!--                            <tr>-->
+<!--                                <th scope="row">모델</th>-->
+<!--                                <td>--><?php //echo $it['it_model']; ?><!--</td>-->
+<!--                            </tr>-->
+<!--                            --><?php //} ?>
                         </tbody>
                     </table>
                 </div>
