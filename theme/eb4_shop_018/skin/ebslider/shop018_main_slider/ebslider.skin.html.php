@@ -85,6 +85,13 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/slick/s
     .main-slider-<?php echo $es_code; ?> .item-image {height: 350px;}
     .main-slider-<?php echo $es_code; ?> .item-content p {font-size:16px;}
 }
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 </style>
 
 <div class="main-slider-<?php echo $es_code; ?>">
@@ -93,39 +100,40 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/slick/s
 		<div class="main-slider-list">
 		<?php if (is_array($slider)) { ?>
 			<?php foreach ($slider as $k => $item) { ?>
-			<div class="item item-<?php echo $k + 1 ?>">
-                <div class="item-image" style="background-image:url(<?php echo $item['src_1']?>) ">
-                    <img src="<?php echo $item['src_2']?>" alt="" class="img-responsive visible-xs">
-                </div>
-                
-                <div class="container">
-                    <div class="item-content">
-                        <?php if ($item['ei_title']) { ?>
-                        <h5 class="en-font"><?php echo $item['ei_title']?></h5>
-                        <?php } ?>
-                        <?php if ($item['ei_subtitle']) { ?>
-                        <h4 class="en-font"><?php echo $item['ei_subtitle']?></h4>
-                        <?php } ?>
-                        <?php if ($item['ei_text']) { ?>
-                        <p><?php echo $item['ei_text'] ?></p>
-                        <?php } ?>
-                        <?php if ($item['href_1']) { ?>
-                        <div class="btn-more en-font"><a href="<?php echo $item['href_1']; ?>" target="<?php echo $item['target_1']; ?>">More View</a></div>
-                        <?php } ?>
+                <div class="item item-<?php echo $k + 1 ?>">
+                    <div class="item-image" style="background-image:url(<?php echo $item['src_1']?>)">
+                        <img src="<?php echo $item['src_2']?>" alt="" class="img-responsive visible-xs">
                     </div>
+
+                    <div class="container">
+                        <div class="item-content" style="text-align: center">
+                            <?php if ($item['ei_title']) { ?>
+                                <h5 class="en-font" style="font-family: Pretendard-Bold,serif; text-align: center;"><?php echo $item['ei_title']?></h5>
+                            <?php } ?>
+                            <?php if ($item['ei_subtitle']) { ?>
+                                <h4 class="en-font" style="font-family: Pretendard-Regular, serif"><?php echo $item['ei_subtitle']?></h4>
+                            <?php } ?>
+                            <?php if ($item['ei_text']) { ?>
+                                <p><?php echo $item['ei_text'] ?></p>
+                            <?php } ?>
+                            <?php if ($item['href_1']) { ?>
+                                <div class="btn-more en-font"><a href="<?php echo $item['href_1']; ?>" target="<?php echo $item['target_1']; ?>">More View</a></div>
+                            <?php } ?>
+                        </div>
+                    </div>
+
+                    <?php if ($is_admin == 'super' && !G5_IS_MOBILE) { ?>
+                        <div class="adm-edit-btn btn-edit-mode" style="bottom:30px">
+                            <div class="btn-group">
+                                <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&pid=ebslider_itemform&thema=<?php echo $theme; ?>&es_code=<?php echo $es_code; ?>&ei_no=<?php echo $item['ei_no']; ?>&w=u&iw=u&wmode=1" onclick="eb_admset_modal(this.href); return false;" class="ae-item-btn"><i class="far fa-edit"></i> EB슬라이더 아이템 설정</a>
+                                <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&pid=ebslider_itemform&thema=<?php echo $theme; ?>&es_code=<?php echo $es_code; ?>&ei_no=<?php echo $item['ei_no']; ?>&w=u&iw=u" target="_blank" class="ae-btn-r" title="새창 열기">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
 
-				<?php if ($is_admin == 'super' && !G5_IS_MOBILE) { ?>
-                <div class="adm-edit-btn btn-edit-mode" style="bottom:30px">
-                    <div class="btn-group">
-                        <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&pid=ebslider_itemform&thema=<?php echo $theme; ?>&es_code=<?php echo $es_code; ?>&ei_no=<?php echo $item['ei_no']; ?>&w=u&iw=u&wmode=1" onclick="eb_admset_modal(this.href); return false;" class="ae-item-btn"><i class="far fa-edit"></i> EB슬라이더 아이템 설정</a>
-                        <a href="<?php echo G5_ADMIN_URL; ?>/?dir=theme&pid=ebslider_itemform&thema=<?php echo $theme; ?>&es_code=<?php echo $es_code; ?>&ei_no=<?php echo $item['ei_no']; ?>&w=u&iw=u" target="_blank" class="ae-btn-r" title="새창 열기">
-                            <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                <?php } ?>
-			</div>
 			<?php } ?>
 		<?php } ?>
 
