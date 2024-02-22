@@ -62,8 +62,8 @@ $(window).on('load', function() {
         right: 5px;
         height: 50px;
         width: 50px;
-        background: green;
-        border-color: green;
+        background:  rgb(33,73,72);
+        border-color:  rgb(33,73,72);
     }
     i.fa-search{
         line-height: 0.5;
