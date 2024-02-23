@@ -120,15 +120,15 @@ button.mfp-close {position:fixed;color:#fff !important}
     
     <?php if ($is_admin == 'super' || $is_auth) {  ?>
     <div class="board-view-info">
-         <span class="view-nick">
-            <?php echo eb_nameview($view['mb_id'], $view['wr_name'], $view['wr_email'], $view['wr_homepage']); ?>
-        </span>
-        
-        <?php if ($eyoom_board['bo_sel_date_type'] == '1') { ?>
-        <span><?php echo $eb->date_time('Y-m-d H:i',$view['wr_datetime']); ?></span>
-        <?php } else if ($eyoom_board['bo_sel_date_type'] == '2') { ?>
-        <span><?php echo $eb->date_format('Y-m-d H:i',$view['wr_datetime']); ?></span>
-        <?php } ?>
+<!--         <span class="view-nick">-->
+<!--            --><?php //echo eb_nameview($view['mb_id'], $view['wr_name'], $view['wr_email'], $view['wr_homepage']); ?>
+<!--        </span>-->
+<!--        -->
+<!--        --><?php //if ($eyoom_board['bo_sel_date_type'] == '1') { ?>
+<!--        <span>--><?php //echo $eb->date_time('Y-m-d H:i',$view['wr_datetime']); ?><!--</span>-->
+<!--        --><?php //} else if ($eyoom_board['bo_sel_date_type'] == '2') { ?>
+<!--        <span>--><?php //echo $eb->date_format('Y-m-d H:i',$view['wr_datetime']); ?><!--</span>-->
+<!--        --><?php //} ?>
     </div>
     <?php } ?>
 
@@ -196,14 +196,18 @@ button.mfp-close {position:fixed;color:#fff !important}
                 <div class="col-lg-6">
                     <?php /* 제품정보 */?>
                     <dl class="product-dl">
-                        <dt>제품명</dt>
+                        <dt>한약재명</dt>
                         <dd><?php echo get_text($view['wr_subject']); ?></dd>
+                        <br>
                         <dt><?php echo $board['bo_6_subj']; ?></dt>
                         <dd><?php echo $view['wr_6']; ?></dd>
+                        <br>
                         <dt><?php echo $board['bo_7_subj']; ?></dt>
                         <dd><?php echo $view['wr_7']; ?></dd>
+                        <br>
                         <dt><?php echo $board['bo_8_subj']; ?></dt>
                         <dd><?php echo $view['wr_8']; ?></dd>
+                        <br>
                         <dt><?php echo $board['bo_9_subj']; ?></dt>
                         <dd><?php echo $view['wr_9']; ?></dd>
                         <?php /* 관련링크 시작 */?>
@@ -220,6 +224,7 @@ button.mfp-close {position:fixed;color:#fff !important}
         </div>
 
         <?php /* 본문 내용 시작 */?>
+        <br>
         <div id="board_view_con" class="board-view-con view-content"><?php echo $view_content; ?></div>
         <?php echo $config['cf_editor'] == 'tuieditor' ? $bbs->tuieditor_viewer("board_view_con"): ''; ?>
         <?php /* 본문 내용 끝 */?>

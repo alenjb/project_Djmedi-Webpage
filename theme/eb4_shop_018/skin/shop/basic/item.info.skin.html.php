@@ -7,10 +7,10 @@ if (!defined('_EYOOM_')) exit;
 
 <?php if ($default['de_rel_list_use']) { ?>
 <?php /* ---------- 관련상품 시작 ---------- */ ?>
-<section id="sit_rel">
-    <h2>관련상품</h2>
-    <?php echo $rel_list; ?>
-</section>
+<!--<section id="sit_rel">-->
+<!--    <h2>관련상품</h2>-->
+<!--    --><?php //echo $rel_list; ?>
+<!--</section>-->
 <?php /* ---------- 관련상품 끝 ---------- */ ?>
 <?php } ?>
 

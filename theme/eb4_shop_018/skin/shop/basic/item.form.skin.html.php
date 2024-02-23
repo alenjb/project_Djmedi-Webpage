@@ -76,26 +76,26 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/fotoram
             <?php /* 다른 상품 보기 끝 */ ?>
 
             <?php /* 상품 평점 및 SNS 공유버튼 시작 */ ?>
-            <div class="shop-product-star-sns">
-                <?php if ($star_score) { ?>
-                <span class="sound_only">고객평점</span>
-                <img src="<?php echo G5_SHOP_URL; ?>/img/s_star<?php echo $star_score?>.png" alt="" class="sit_star" width="80">
-                <span class="m-l-5">별<?php echo $star_score?>개</span>
-                <span class="li-divider"></span>
-                <?php } ?>
-                <span title="사용후기"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="sound_only">사용후기</span> <?php echo $item_use_count; ?></span>
-                <span class="li-divider"></span>
-                <span title="위시리스트저장"><i class="far fa-heart" aria-hidden="true"></i><span class="sound_only">위시리스트저장</span> <?php echo get_wishlist_count_by_item($it['it_id']); ?></span>
-                <div class="btn-group item-share-wrap">
-                    <button type="button" class="item-share-btn" data-bs-toggle="dropdown"><i class="fas fa-share-alt" aria-hidden="true"></i><span class="sound_only">sns 공유</span></button>
-                    <div class="dropdown-menu">
-                        <div class="share-sns">
-                            <?php echo $sns_share_links; ?>
-                        </div>
-                        <a href="javascript:popup_item_recommend('<?php echo $it['it_id']; ?>');" class="share-rec" title="추천하기"><i class="far fa-envelope" aria-hidden="true"></i><span class="sound_only">추천하기</span></a>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="shop-product-star-sns">-->
+<!--                --><?php //if ($star_score) { ?>
+<!--                <span class="sound_only">고객평점</span>-->
+<!--                <img src="--><?php //echo G5_SHOP_URL; ?><!--/img/s_star--><?php //echo $star_score?><!--.png" alt="" class="sit_star" width="80">-->
+<!--                <span class="m-l-5">별--><?php //echo $star_score?><!--개</span>-->
+<!--                <span class="li-divider"></span>-->
+<!--                --><?php //} ?>
+<!--                <span title="사용후기"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="sound_only">사용후기</span> --><?php //echo $item_use_count; ?><!--</span>-->
+<!--                <span class="li-divider"></span>-->
+<!--                <span title="위시리스트저장"><i class="far fa-heart" aria-hidden="true"></i><span class="sound_only">위시리스트저장</span> --><?php //echo get_wishlist_count_by_item($it['it_id']); ?><!--</span>-->
+<!--                <div class="btn-group item-share-wrap">-->
+<!--                    <button type="button" class="item-share-btn" data-bs-toggle="dropdown"><i class="fas fa-share-alt" aria-hidden="true"></i><span class="sound_only">sns 공유</span></button>-->
+<!--                    <div class="dropdown-menu">-->
+<!--                        <div class="share-sns">-->
+<!--                            --><?php //echo $sns_share_links; ?>
+<!--                        </div>-->
+<!--                        <a href="javascript:popup_item_recommend('--><?php //echo $it['it_id']; ?><!--');" class="share-rec" title="추천하기"><i class="far fa-envelope" aria-hidden="true"></i><span class="sound_only">추천하기</span></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
             <?php /* 상품 평점 및 SNS 공유버튼 끝 */ ?>
             <?php /* ---------- 상품이미지 미리보기 끝 ---------- */ ?>
         </div>
