@@ -148,13 +148,19 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/fotoram
                             */
                             ?>
 
-<!--                            여분필드들을 모두 출력-->
+                            <!--   여분필드 1,2번 출력-->
 
-                            <?php for ($i = 0; $i <= 10; $i++) { ?>
+                            <?php for ($i = 1; $i <= 2; $i++) { ?>
                                 <?php if (!empty($it['it_' . $i])) { ?>
                                     <tr>
                                         <th scope="row"><?php echo $it['it_' . $i . '_subj']; ?></th>
-                                        <td><?php echo $it['it_' . $i]; ?></td>
+                                        <?php
+                                        if ($it['it_' . $i . '_subj'] == "한약재 사전 링크") {
+                                            echo '<td><a href="' . stripslashes($it['it_' . $i]) . '">' . $it['it_name'] . '</a></td>';
+                                        } else {
+                                            echo '<td>' . $it['it_' . $i] . '</td>';
+                                        }
+                                        ?>
                                     </tr>
                                 <?php } ?>
                             <?php } ?>
@@ -203,6 +209,26 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/fotoram
                                     <?php } ?>
                                 </td>
                             </tr>
+
+
+
+                            <!--   여분필드들을 3번부터 모두 출력-->
+                            <?php for ($i = 3; $i <= 10; $i++) { ?>
+                                <?php if (!empty($it['it_' . $i])) { ?>
+                                    <tr>
+                                        <th scope="row"><?php echo $it['it_' . $i . '_subj']; ?></th>
+                                        <?php
+                                        if ($it['it_' . $i . '_subj'] == "한약재 사전 링크") { // 한약재 사전인 경우는 특수 처리
+                                            echo '<td><strong><u><a href="' . stripslashes($it['it_' . $i]) . '">' . '한약재 사전 [' . $it['it_name'] . ']' .'</u></a></strong></td>';
+
+                                        } else {
+                                            echo '<td>' . $it['it_' . $i] . '</td>';
+                                        }
+                                        ?>
+                                    </tr>
+                                <?php } ?>
+                            <?php } ?>
+
 
                             <?php if($it['it_buy_min_qty']) { ?>
                             <tr>
