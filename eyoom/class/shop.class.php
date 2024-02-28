@@ -381,7 +381,9 @@ class shop extends eyoom
             }
 
             if ($id == $anc_id) $active = "class=\"active\"";
-            $li .= "<li ".$active."><a href=\"#".$id."\">".$title.$ii_count_info."</a></li>\n";
+            if($id != 'sit_use'){
+                $li .= "<li ".$active."><a href=\"#".$id."\">".$title.$ii_count_info."</a></li>\n";
+            }
             unset($active, $ii_count_info);
         }
         return "

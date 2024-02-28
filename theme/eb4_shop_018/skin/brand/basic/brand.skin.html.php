@@ -43,7 +43,7 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/sly/tab
                         <a href="<?php echo G5_SHOP_URL; ?>/brand.php?br_cd=<?php echo urlencode($list[$i]['br_code']); ?>">
                             <?php if ($list[$i]['br_img']) { ?>
                             <div class="category-img">
-                                <img src="<?php echo $list[$i]['img_url']?>" class="img-fluid" alt="">
+                                <img src="<?php echo "$list[$i]['img_url']"?>" class="img-fluid" alt="">
                             </div>
                             <?php } ?>
                             <div class="category-title"><?php echo $list[$i]['br_name']; ?></div>

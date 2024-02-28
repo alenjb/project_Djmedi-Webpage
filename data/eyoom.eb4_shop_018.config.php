@@ -78,5 +78,5 @@ $eyoom = array(
 	"tag_dpmenu_sort" => "regdt",
 	"use_brand" => "n",
 	"anonymous_title" => "",
-	"work_url" => "localhost",
+	"work_url" => "dev.hanyack.kr",
 );

@@ -209,8 +209,9 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/sweetal
             </div>
             <?php } ?>
             <div class="product-desc">
-                <h4>
-                    <a href="<?php echo $list[$i]['href']; ?>" <?php echo $infinite_wmode ? 'onclick="eb_modal(this.href); return false;"': ''; ?>>
+                <h3>
+                    <a style="font-family: Pretendard-Bold,serid"
+                            href="<?php echo $list[$i]['href']; ?>" <?php echo $infinite_wmode ? 'onclick="eb_modal(this.href); return false;"': ''; ?>>
                         <?php if ($is_category && $list[$i]['ca_name']) { ?>
                         <span class="text-gray">[<?php echo $list[$i]['ca_name']; ?>]</span>
                         <?php } ?>
@@ -228,7 +229,8 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/sweetal
                         </label>
                     </span>
                     <?php } ?>
-                </h4>
+                </h3>
+                <br>
                 <dl class="product-dl">
                     <dt><?php echo $board['bo_6_subj']; ?></dt>
                     <dd><?php echo $list[$i]['wr_6']; ?></dd>

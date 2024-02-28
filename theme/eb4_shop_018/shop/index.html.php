@@ -62,8 +62,8 @@ $(window).on('load', function() {
         right: 5px;
         height: 50px;
         width: 50px;
-        background:  rgb(33,73,72);
-        border-color:  rgb(33,73,72);
+        background:   #3A4C38;
+        border-color:  #3A4C38;
     }
     i.fa-search{
         line-height: 0.5;
@@ -128,7 +128,7 @@ $(window).on('load', function() {
         <div class="row height d-flex justify-content-center align-items-center">
             <div class="col-md-8">
                 <div class="search">
-                    <form name="frmsearch1" action="http://192.168.0.12:8888/shop/search.php?sfl=wr_subject%7C%7Cwr_content&sop=and&q=" onsubmit="return search_submit(this);">
+                    <form name="frmsearch1" action="http://dev.hanyack.kr/shop/search.php?sfl=wr_subject%7C%7Cwr_content&sop=and&q=" onsubmit="return search_submit(this);">
                         <input type="text" name="q" value id="head_sch_str" class="form-control" placeholder="원하시는 약재를 검색해보세요">
                     <button class="btn btn-primary" type="submit"> <i class="fa fa-search"></i></button>
                     </form>

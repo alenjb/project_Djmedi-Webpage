@@ -161,6 +161,13 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
 	                <td><?php echo $it['it_model']; ?></td>
 	            </tr>
 	            <?php } ?>
+                <?php for ($i = 0; $i <= 10; $i++) { ?>
+                        <tr>
+                            <th scope="row">여분필드 값들</th>
+                            <td><?php echo $it['it_' . $i]; ?></td>
+                        </tr>
+                <?php } ?>
+
 
 	            <?php
 	            /* 재고 표시하는 경우 주석 해제

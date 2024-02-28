@@ -87,7 +87,7 @@ $item_view = 'zoom';
 	                <?php } ?>
 
 	                <?php /* 로고 */ ?>
-	                <a href="<?php echo "http://192.168.0.12:8888/"; ?>">
+	                <a href="<?php echo "http://dev.hanyack.kr/"; ?>">
 	                    <?php if ($logo == 'text') { ?>
 	                        <span><?php echo $config['cf_title']; ?></span>
 	                    <?php } else if ($logo == 'image') { ?>
@@ -207,8 +207,8 @@ $item_view = 'zoom';
                             <ul>
                                 <li><a href="/bbs/board.php?bo_table=notice" style="font-family: Pretendard-Regular, serif; font-size: 20px;">공지사항</a></li>
                                 <li><a href="<?php echo G5_SHOP_URL; ?>/wishlist.php" style="font-family: Pretendard-Regular, serif; font-size: 20px;">찜</a></li>
-                                <li class="last-link"><a href="<?php echo "http://192.168.0.12:8888/page/?pid=overview" ?>" style="font-family: Pretendard-Regular, serif; font-size: 20px;">회사소개</a></li>
-                                <li class="last-link"><a href="<?php echo "http://192.168.0.12:8888/page/?pid=brand" ?>" style="font-family: Pretendard-Regular, serif; font-size: 20px; background-color: rgb(210,186,186)">제약사소개</a></li>
+                                <li class="last-link"><a href="<?php echo "http://dev.hanyack.kr/page/?pid=overview" ?>" style="font-family: Pretendard-Regular, serif; font-size: 20px;">회사소개</a></li>
+                                <li class="last-link"><a href="<?php echo "http://dev.hanyack.kr/page/?pid=brand" ?>" style="font-family: Pretendard-Regular, serif; font-size: 20px; background-color: rgb(210,186,186)">제약사소개</a></li>
                             </ul>
                         </div>
                     </nav>

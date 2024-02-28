@@ -526,7 +526,7 @@ if($default['de_tax_flag_use']) {
 
 $od_email         = get_email_address($od_email);
 $od_name          = clean_xss_tags($od_name);
-$od_tel           = clean_xss_tags($od_tel;
+$od_tel           = clean_xss_tags($od_tel);
 $od_hp            = clean_xss_tags($od_hp);
 $od_zip           = preg_replace('/[^0-9]/', '', $od_zip);
 $od_zip1          = substr($od_zip, 0, 3);

@@ -157,7 +157,9 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/fotoram
                                         <?php
                                         if ($it['it_' . $i . '_subj'] == "한약재 사전 링크") {
                                             echo '<td><a href="' . stripslashes($it['it_' . $i]) . '">' . $it['it_name'] . '</a></td>';
-                                        } else {
+                                        }else if($it['it_' . $i . '_subj'] == "근당가격"){
+                                            echo '<td class="number">' . $it['it_' . $i] . '</td>';
+                                        }else {
                                             echo '<td>' . $it['it_' . $i] . '</td>';
                                         }
                                         ?>
@@ -436,6 +438,21 @@ add_stylesheet('<link rel="stylesheet" href="'.EYOOM_THEME_URL.'/plugins/fotoram
 <script src="<?php echo EYOOM_THEME_URL; ?>/plugins/elevatezoom-plus/jquery.ez-plus.js"></script>
 <?php } ?>
 <script>
+
+<!-- 근당가격에 쉼표와 원을 추가하는 코드-->
+function addCommasToNumber(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원";
+}
+
+// 숫자를 포함한 요소 선택
+const numbers = document.querySelectorAll(".number");
+
+// 각 요소에 숫자에 쉼표를 추가하고 원을 붙임
+numbers.forEach(function(element) {
+    const originalNumber = parseInt(element.textContent);
+    element.textContent = addCommasToNumber(originalNumber);
+});
+
 $(document).ready(function(){
     <?php if (!G5_IS_MOBILE) { // PC버전의 경우에만 줌적용 ?>
     $('.elevaterzoom_item img').ezPlus({
